@@ -1,0 +1,69 @@
+.checkoutLayout{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    
+    @include responsive("medium"){
+
+
+        padding: 20px;
+
+       }
+       @include responsive("extra-large"){
+       
+       
+        padding: 40px;
+       }
+}
+.checkoutLayout .right{
+    background-color: #5358B3;
+    border-radius: 20px;
+
+    
+    @include responsive("medium"){
+
+
+        padding: 40px;
+
+       }
+       @include responsive("extra-large"){
+       
+       
+        padding: 60px;
+       }
+    color: #fff;
+}
+.checkoutLayout .right .form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-bottom: 1px solid #7a7fe2;
+    padding-bottom: 20px;
+}
+.checkoutLayout .form h1,
+.checkoutLayout .form .group:nth-child(-n+3){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.checkoutLayout .form input, 
+.checkoutLayout .form select
+{
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 10px;
+    border:none;
+    background-color: #6a6fc9;
+    color: #fff;
+}
+.checkoutLayout .right .return .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.checkoutLayout .right .return .row div:nth-child(2){
+    font-weight: bold;
+    font-size: x-large;
+}

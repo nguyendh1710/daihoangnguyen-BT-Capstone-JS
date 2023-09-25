@@ -1,0 +1,31 @@
+@mixin responsive ($screen) {
+              
+    
+    
+    @if(map-has-key($map: $breakpoint, $key:$screen)){
+        
+        // kiểm tra $screen hợp lệ, có trong mảng breakpoint
+
+
+
+
+                 $width:map-get($map: $breakpoint, $key:$screen);
+
+
+                  @media (min-width:$width) {@content;}
+
+     }
+     @else{
+
+
+
+
+                    @warn "invalid screen";
+
+
+
+    }
+}
+
+    
+

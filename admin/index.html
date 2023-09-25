@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<!-- Bootstrap CSS v5.2.1 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- FontAwesome 6.2.0 CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- my CSS  -->
+    <link rel="stylesheet" href="./../assets/css/main.css">
+    
+</head>
+<body id="body">
+<!-- header -->
+
+<header class="">
+  <h1 class="px-2">DHN Phone</h1>
+ 
+    <a href="./../customer/index.html"><i class="fa-solid fa-store text-white fs-3" style="padding-left:300px"></i></a>
+    <a href="./../index.html"><i class="fa-solid fa-house text-white fs-3" style="margin-right:700px"></i></a>
+
+
+ 
+  
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- content -->
+<section class="content container pt-5 ">
+  <div class=" addPhone">
+    <h1 class="text-center fw-bolder">Phone Manager</h1>
+  
+    <button  id="them" type="button" class="addPhoneButton btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+    <i class="fa-solid fa-add "></i>
+    <span>Add phone</span>
+  
+    </button>
+  </div>
+  <div class="input-group w-25">
+    <input type="text" class="form-control" placeholder="Tìm sản phẩm" id="searchName" >
+    <div class="input-group-prepend ">
+      
+         <span class="input-group-text h-100" id="btnTimNV" ><i class="fa fa-search" ></i></span>
+      
+    </div>
+    <button  id="them" type="button" onclick="sortAcs()"><i class="fa-solid fa-arrow-up m-3"></i></button>
+    <button  id="them" type="button" onclick="sortDecs()" ><i class="fa-solid fa-arrow-down m-3"></i></button>
+  </div>
+  
+  <div id="btThemsp">
+
+<!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="modalTitleId">Thêm sản phẩm</h5> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <lable>Tên sản phẩm</lable>
+            <input class="w-100"  placeholder="Nhập vào tên sản phẩm" id="nameSP"></input>
+            <div id="spanName" class="text-danger"></div>
+            <lable>Giá sản phẩm</lable>
+            <input class="w-100"  placeholder="Nhập vào giá sản phẩm" id="priceSP"></input>
+            <div id="spanPrice" class="text-danger"></div>
+            <lable>Màn hình sản phẩm</lable>
+            <input class="w-100"  placeholder="Nhập vào màn hình  sản phẩm" id="screenSP"></input>
+            <div id="spanScreen" class="text-danger"></div>
+            <lable>Camera sau sản phẩm</lable>
+            <input class="w-100"  placeholder="Nhập vào camera sau sản phẩm" id="backCameraSP"></input>
+            <div id="spanBackCamera" class="text-danger"></div>
+            <lable>Camera trước sản phẩm</lable>
+            <input class="w-100"  placeholder="Nhập vào camera trước sản phẩm" id="frontCameraSP"></input>
+            <div id="spanfrontCamera" class="text-danger"></div>
+            <lable>Hình sản phẩm</lable>
+            <input class="w-100" placeholder="Nhập vào hình sản phẩm" id="photoSP"></input>
+            <div id="spanPhoto" class="text-danger"></div>
+            <lable>Mô tả sản phẩm</lable>
+            <input class="w-100" placeholder="Nhập vào mô tả sản phẩm" id="desSP"></input>
+            <div id="spanDesc" class="text-danger"></div>
+            <lable>Loại sản phẩm</lable>
+            <select class="w-100" placeholder="Chọn loại sản phẩm" id="typeSP">
+              
+            
+                     <option>IPhone</option>
+                     <option>Samsung</option>
+
+            </select>
+            <div id="spanType" class="text-danger"></div>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button type="button" class="btn btn-primary" onclick="createProduct()">Thêm</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+  <div class="bang">
+         <table>
+               
+                     
+              
+               
+               <tr>
+
+                     <td id="producctId">#</td>
+                     <td id="productName">Name</td>
+                     <td id="productPrice">Price</td>
+
+                     <td id="productPhoto">Photo</td>
+                     <td id="productDis">Discription</td>
+                     <td id="productAction">Action</td>
+                     
+
+
+
+               </tr>
+
+
+
+
+
+
+
+
+          <tbody id="productList">
+
+                
+
+          </tbody>
+         </table>
+  </div>
+    
+</section>
+
+</br>
+</br>
+<!-- footer -->
+<footer class="  container-fluid  pt-3">
+    <div class="">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="text-white fw-bold fs-3">DHN Phone</h5>
+          <p class="text-white text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="text-white fw-bold fs-3">Thông tin chính sách</h5>
+          <ul class=" ">
+            <li><a class="text-white" href="#">Mua hàng</a></li>
+            <li><a class="text-white" href="#">Chính sách giao hàng</a></li>
+            <li><a class="text-white" href="#">Trung tâm bảo hành</a></li>
+            <li><a class="text-white" href="#">Tra cứu</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="text-white fw-bold fs-3">Dịch vụ</h5>
+          <ul>
+            <li><a class="text-white" href="#">Quy chế</a></li>
+            <li><a class="text-white" href="#">Ưu đãi</a></li>
+            <li><a class="text-white" href="#">Liên hệ</a></li>
+            <li><a class="text-white" href="#">Khách hàng</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center">
+      <div class="">
+      Made by <a class="brown-text text-lighten-3" href="#">DHN Phone</a>
+      </div>
+    </div>
+</footer>
+
+
+
+
+
+
+ <!-- Bootstrap JavaScript Libraries -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+ integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+ integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+</script>
+<!--  jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<!--axios library-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<!--my js-->
+     <script  src="./models/Product.js"></script>
+     <script  src="./services/productAPI.js"></script>
+    <script  src="./controllers/index.js"></script>
+    
+</body>
+</html>
