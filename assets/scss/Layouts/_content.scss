@@ -1,0 +1,92 @@
+
+
+.content{
+     
+     .addPhone {
+          position: relative;
+          background-color: darkgray;
+          .addPhoneButton{
+               
+               position: absolute;
+               top:-1px;
+               right: 0;
+               border-radius: 18px;
+               color: aliceblue;
+              background-color: black;
+              i{
+     
+     
+                       border-radius: 50%;
+                       
+                       color: aliceblue;
+         
+         
+              }
+     
+     
+     
+     
+        }
+
+     }
+     
+
+
+
+     table{
+          width: 100%;
+          
+          tr{
+     
+     
+     
+                   
+     
+                    td{
+     
+     
+                     text-align: center;
+                     
+                     @include responsive("medium"){
+
+
+                         width: 30px;
+
+                        }
+                        @include responsive("extra-large"){
+                        
+                        
+                         width: 50px;
+                          
+                        }
+                     height: 70px;
+                     background-color:black;
+                     color: aliceblue;
+                 
+                     img{
+
+                         width:90px;
+                         height:100px;
+
+
+
+                     }
+                 
+                 
+                 }
+     
+     
+     
+          }
+     
+     
+     
+     
+     }
+
+
+
+
+
+
+}

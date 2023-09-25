@@ -1,0 +1,75 @@
+.carousel{
+    width: 100vw;
+   
+    @include responsive("medium"){
+
+
+        height: 70vh;
+
+       }
+       @include responsive("extra-large"){
+       
+       
+        height: 90vh;
+       }
+    padding-top: 30px;
+    
+    .carousel-inner{
+        
+       
+        @include responsive("medium"){
+
+
+            height: 90vh;
+
+           }
+           @include responsive("extra-large"){
+           
+           
+            height: 100vh;
+           }
+
+
+        .carousel-item{
+           
+    
+           display:block;
+           position: relative;
+           
+           @include responsive("medium"){
+
+
+            padding-left: 400px;
+
+           }
+           @include responsive("extra-large"){
+           
+           
+            padding-left: 500px;
+             
+           }
+           color: aliceblue;
+            img{
+                position: absolute;
+                top:0;
+                height: 300px;
+                
+                padding-left: 300px;
+    
+             }
+            
+
+        }
+
+
+
+
+
+
+
+    }
+       
+         
+
+
+}

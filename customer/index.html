@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<!-- Bootstrap CSS v5.2.1 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- FontAwesome 6.2.0 CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- my CSS  -->
+    <link rel="stylesheet" href="./../assets/css/main.css">
+    <link rel="stylesheet" href="./../assets/css/shoppingCart.css">
+</head>
+<body>
+<!-- header -->
+
+<header class="">
+  <h1 class="px-2">DHN Phone</h1>
+  <div class="icon">
+    <a href="./../index.html"><i class="fa-solid fa-house"></i></a>
+    <a href="./../admin/index.html"><i class="fa-solid fa-user"></i></a>
+
+
+  </div>
+  <div class="iconCart">
+      <img src="./../assets/images/icon.png">
+      <div class="totalQuantity">0</div>
+  </div>
+</header>
+<!-- carousel -->
+
+<section class="carousel">
+<div id="carouselId" class=" slide container-fluid" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item ">
+     
+      <h2>Iphone X</h2>
+      <p class="price">Giá:100</p>
+      <p class="screen">Màn hình: screen 356</p>
+      <p class="backCamera">Camera sau:2 camera 25px</p>
+      <p class="frontCamera">Cammera trước: camera 25px</p>
+      <p class="desc">Mô tả:Tinh tế</p>
+      <p class="type">Kiểu:Iphone</p>
+    
+      <img src="./../assets/images/iphone-carousel.png" class=" d-block" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <h2>Iphone X</h2>
+      <p class="price">Giá:100</p>
+      <p class="screen">Màn hình: screen 356</p>
+      <p class="backCamera">Camera sau:2 camera 25px</p>
+      <p class="frontCamera">Cammera trước: camera 25px</p>
+      <p class="desc">Mô tả:Tinh tế</p>
+      <p class="type">Kiểu:Iphone</p>
+      <img src="./../assets/images/iphone-carousel.png" class=" d-block" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <h2>Iphone X</h2>
+      <p class="price">Giá:100</p>
+      <p class="screen">Màn hình: screen 356</p>
+      <p class="backCamera">Camera sau:2 camera 25px</p>
+      <p class="frontCamera">Cammera trước: camera 25px</p>
+      <p class="desc">Mô tả:Tinh tế</p>
+      <p class="type">Kiểu:Iphone</p>
+      <img src="./../assets/images/iphone-carousel.png" class=" d-block" alt="Third slide">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- shoppingCart -->
+<section class="shoppingCart bg-gradient ">
+    <h1 class="text-center pt-3 fw-bolder text-secondary " > Sản phẩm</h1>
+    <div class="container ">
+      
+        </br>
+        </br>
+         <!--nút lựa sản phẩm theo kiểu-->
+         <select id="select" class="d-block w-25">
+            <option value=""> -- Chọn -- </option>
+            <option value="Samsung">Samsung</option>
+            <option value="iphone"> iphone </option>
+          </select>
+            <div id="mes"> </div>
+       </br>
+       </br>
+
+
+
+
+        <div class="listProduct" id="danhSachSp">
+
+            
+
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>CART</h2>
+
+        <div class="listCart">
+
+
+            
+            
+        </div>
+
+
+        <div class="totalPrice"></div>
+
+
+        <div class="buttons">
+            <div class="close">
+                CLOSE
+            </div>
+            
+                <button  id="buttonCheckout" onclick="clearListCart ()">CHECKOUT</button>   
+
+            
+        </div>
+    </div>
+</section>
+
+</br>
+</br>
+<!-- footer -->
+<footer class="page-footer teal container-fluid text-bg-warning pt-3">
+    <div class="">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="text-white fw-bold fs-3">DHN Phone</h5>
+          <p class="text-white text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="text-white fw-bold fs-3">Thông tin chính sách</h5>
+          <ul class=" ">
+            <li><a class="text-white" href="#">Mua hàng</a></li>
+            <li><a class="text-white" href="#">Chính sách giao hàng</a></li>
+            <li><a class="text-white" href="#">Trung tâm bảo hành</a></li>
+            <li><a class="text-white" href="#">Tra cứu</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="text-white fw-bold fs-3">Dịch vụ</h5>
+          <ul>
+            <li><a class="text-white" href="#">Quy chế</a></li>
+            <li><a class="text-white" href="#">Ưu đãi</a></li>
+            <li><a class="text-white" href="#">Liên hệ</a></li>
+            <li><a class="text-white" href="#">Khách hàng</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center">
+      <div class="">
+      Made by <a class="brown-text text-lighten-3" href="#">DHN Phone</a>
+      </div>
+    </div>
+</footer>
+
+
+
+
+
+
+ <!-- Bootstrap JavaScript Libraries -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+ integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+ integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+</script>
+<!--  jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<!--axios library-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+<!--my js-->
+     <script src="./models/Product.js"></script>
+    <script src="./controllers/index.js"></script>
+    
+</body>
+</html>
